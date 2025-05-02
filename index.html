@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Hunt - Web Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .skill-badge {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .skill-badge:hover {
+      background-color: white;
+      color: black;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      background-color: #00c6ff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #009ee0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="bg-video" autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2020/10/19/52823-471089056_large.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>👋 Hi, I'm a Web Developer</h1>
+    <p>Actively seeking job opportunities to apply my skills and grow!</p>
+
+    <div class="skills">
+      <div class="skill-badge">HTML</div>
+      <div class="skill-badge">CSS</div>
+      <div class="skill-badge">JavaScript</div>
+      <div class="skill-badge">React</div>
+      <div class="skill-badge">SQL</div>
+      <div class="skill-badge">Python</div>
+      <div class="skill-badge">Postman</div>
+    </div>
+
+    <button onclick="visitLinkedIn()">📎 View My LinkedIn Profile</button>
+  </div>
+
+  <script>
+    function visitLinkedIn() {
+      window.open('https://www.linkedin.com/in/priyanka-sen-406a51308/', '_blank'); 
+    }
+  </script>
+
+</body>
+</html>
